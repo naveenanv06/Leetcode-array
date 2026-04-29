@@ -1,17 +1,15 @@
-import java.util.*;
 class Solution {
     public int smallestRangeI(int[] nums, int k) {
-            Arrays.sort(nums);
-            int n_k=k*-1;
-           
-                int max=nums[nums.length-1]-k;
-                int min=nums[0]+k;
-                int diff=max-min;
-                return Math.max(0,diff);
 
-                
-            
-            
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for(int num : nums) {
+            if(num < min) min = num;
+            if(num > max) max = num;
+        }
 
+        int diff = max - min - 2 * k;
+
+        return Math.max(0, diff);
     }
 }
