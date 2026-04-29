@@ -7,9 +7,7 @@ class Solution {
             if(num < min) min = num;
             if(num > max) max = num;
         }
-
         int diff = max - min - 2 * k;
-
         return Math.max(0, diff);
     }
 }
