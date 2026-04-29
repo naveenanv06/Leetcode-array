@@ -12,10 +12,12 @@ class Solution {
                  min=true;
           }
           else{
+            System.gc();
             return false;
           }
 
        }
+       System.gc();
        return true; 
     }
 }
