@@ -23,18 +23,19 @@ class Solution {
         int bb=Integer.parseInt(cor.substring(3));
         int sum=0;
         int hh=Math.abs(a-aa);
+        int diff=0;
         if(b>bb){
             while(hh>1){
                 sum++;
                 hh--;
             }
             
-            int diff=Math.abs(60-b+bb);
+            diff=Math.abs(60-b+bb);
             return check(diff,sum);
         }
         else{
             sum+=hh;
-            int diff=Math.abs(b-bb);
+            diff=Math.abs(b-bb);
             return check(diff,sum);
 
         }
