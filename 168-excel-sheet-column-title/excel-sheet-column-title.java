@@ -1,6 +1,5 @@
 class Solution {
     public String convertToTitle(int c) {
-
         StringBuilder s = new StringBuilder();
         while (c > 0) {
             c--;
